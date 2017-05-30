@@ -54,7 +54,7 @@ def compare(calllog1, transfertype1, y, gen_result, gen_report):
 
         if flag == 0:
             print transfer[x] + "\tWrong Value"
-            not_found_prompt.add(transfer[x] + " Wrong Value")
+            not_found_prompt.add(transfer[x] + " Wrong Value or Not Found")
             z = 1
             failed = 1
         elif len(verbiage) == 0:
@@ -91,10 +91,9 @@ def excel():
     global testcases  # thisss
     gen_result = open("KVPs Result.html", "a")
     gen_report = open("report.html", "a")
-    gen_result.write(
-        "<html><table align ='center' border='1' width='80%'> <center> <h1>Build Acceptance Test</h1> <h3>Transfer Term</h3></center></table>")
-    gen_report.write(
-        "<html><table align='center' border='1' width='80%'> </table> <center> <h3>Transfer Term</h3></center>")
+    gen_result.write("<html> <center><h1>Build Acceptance Test</h1> <h3>Transfer Term</h3></center>")
+    gen_report.write("<html><table align='center' border='1' width='70%'> </table>")
+    gen_report.write("<br/><table align='center' width='35%'><tr><td align='center'><font size='4'><b>Transfer Term</b></font></td></tr></table>")
     z = 0
     with open('Data File.csv', 'rb') as f:
         reader = csv.reader(f)
@@ -108,7 +107,7 @@ def excel():
             "<td bgcolor='#c2c4c6' align='center'> <b>Remarks</b> </td> "
             "<td bgcolor='#c2c4c6' align='center'> <b>Result</b> </td></tr>")
         gen_report.write(
-            "<br/> <table border='1' align='center' width='35%'> <tr><td align='center' bgcolor='#c2c4c6' width='10%'> <b>Test Case</b> </td> "
+            " <table border='1' align='center' width='35%'> <tr><td align='center' bgcolor='#c2c4c6' width='10%'> <b>Test Case</b> </td> "
             "<td align='center' bgcolor='#c2c4c6' width='60%'> <b>Call Log </b></td>"
             "<td align='center' bgcolor='#c2c4c6' width='20%'> <b>Pass/Fail </b></td></tr>")
         for line in reader:
@@ -131,7 +130,9 @@ if __name__ == "__main__":
         percentage = Decimal(overall_passed) / Decimal(testcases) * 100
         totalper = str(percentage) + '%'
         gen_report.write(
-            "</table><br/><table align='center'> <tr><td><h2>Passed: " + totalper + "</h2></td></tr> </table>")
+            "</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")
+        writetime = open("writetime.txt","a")
+        writetime.write("TransferType Percentage= " + totalper + "\n")
     if failed == 1:
         print"\n\n\n"
         raise SystemError('One of the Test Cases Failed')
