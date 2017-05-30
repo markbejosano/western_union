@@ -23,7 +23,7 @@ def main():
 def compare(calllog1, callflow1, y, gen_result, gen_report):
 	global overall_passed #thisssss
 	global failed
-	global testcases #thisss
+
 	global exec_counter #thisss
 	with open(calllog1) as calllog:
 		flag=0
@@ -91,16 +91,16 @@ def compare(calllog1, callflow1, y, gen_result, gen_report):
  
 def excel():
 	global gen_report
-	
+	global testcases #thisss
+	global writetime
 	starttime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 	writetime = open("writetime.txt", "a")
 	writetime.write("Start Time= " + starttime + "\n")
-	
-	
 	gen_result = open("Call Flow Result.html", "a")
 	gen_report = open("report.html", "a")
-	gen_result.write("<html><table align ='center'  border='1' width='80%'> <center><h1>Build Acceptance Test</h1><br/> <h3>Call Flow</h3></center></table>")
-	gen_report.write("<html><table align ='center'  border='1' width='70%'> <center><h1>Build Acceptance Test</h1><br/></table> <center><h3>Call Flow</h3></center> ")
+	gen_result.write("<html> <center><h1>Build Acceptance Test</h1> <h3>Call Flow</h3></center>")
+	gen_report.write("<html><table align ='center'  border='1' width='70%'> <center><h1>Build Acceptance Test</h1><br/></table>") 
+	gen_report.write("<br/><table  align='center' width='35%'><tr><td align='center'><font size='4'><b>Call Flow</b></font></td></tr></table>")
 	z= 0
 	with open('Data File.csv', 'rb') as f:
 		reader = csv.reader(f)
@@ -112,7 +112,7 @@ def excel():
 						 "<td align='center' bgcolor='#c2c4c6'> <b>Call Log </b></td> "
 				 		 "<td align='center' bgcolor='#c2c4c6'> <b>Remarks </b></td>"
 						 "<td align='center' bgcolor='#c2c4c6'> <b>Result </b></td></tr>")
-		gen_report.write("<br/><table border='1' align='center' width='35%'><tr><td align='center' bgcolor='#c2c4c6' width='10%'> <b>Test Case</b> </td> "
+		gen_report.write("<table border='1' align='center' width='35%'><tr><td align='center' bgcolor='#c2c4c6' width='10%'> <b>Test Case</b> </td> "
 						 "<td align='center' bgcolor='#c2c4c6' width='60%'> <b>Call Log</b> </td> "
 						 "<td align='center' bgcolor='#c2c4c6' width='20%'> <b>Pass/Fail </b></td></tr>")
 		for line in reader:
@@ -122,6 +122,7 @@ def excel():
 				if len(calllog1)>= 10:
 					compare(calllog1, callflow1, y, gen_result, gen_report)
 					y+=1
+	testcases = y - 1
 if __name__ == "__main__":
 	main()
 	excel()
@@ -129,7 +130,8 @@ if __name__ == "__main__":
 		getcontext().prec = 3
 		percentage = Decimal(overall_passed)/Decimal(testcases) * 100
 		totalper = str(percentage) + '%'
-		gen_report.write("</table><br/><table align='center'> <tr><td><h2>Passed: "+ totalper +"</h2></td></tr> </table>")
+		gen_report.write("</table><table align='center'> <tr><td><h3>Passed: "+ totalper +"</h3></td></tr> </table>")
+		writetime.write("Call flow Percentage= " + totalper + "\n")
 	if failed == 1:
 		print"\n\n\n"
 		raise SystemError('One of the Test Cases Failed')
