@@ -1,0 +1,35 @@
+CallFlow,CallTransfer,CallLogs
+"ClosedGreeting
+Closed
+EmergencyMsg
+ClosedHospUCMM_1
+ClosedHospUCMM_2
+ClosedHospUCMM_3","Transfer_Reason=Patient calling about medical records;
+TransferNumber= 6828116;", e4010-20180312163438020-428
+"GreetingDefault
+Greeting
+ProviderOption
+MainMenu
+MMNewOrEmblemPt
+TakeSurveyYN
+Transfer",e4007-20180312172019410-322,e4007-20180312172019410-322
+"GreetingDefault
+Greeting
+ProviderOption
+MainMenu
+MoreOptions
+TakeSurveyYN
+Transfer",e4007-20180312164410776-262,e4007-20180312164410776-262
+"GreetingDefault
+Greeting
+ProviderOption
+MainMenu
+MoreOptions
+TakeSurveyYN
+Transfer", e4010-20180312170640756-452, e4010-20180312170640756-452
+"GreetingDefault
+Greeting
+ProviderOption
+MainMenu
+TakeSurveyYN
+Transfer", e4007-20180312170730800-310, e4007-20180312170730800-310
