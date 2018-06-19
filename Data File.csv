@@ -5,7 +5,7 @@ EmergencyMsg
 ClosedHospUCMM_1
 ClosedHospUCMM_2
 ClosedHospUCMM_3","Transfer_Reason=Patient calling about medical records;
-TransferNumber= 6828116;", e4010-20180312163438020-428.txt
+TransferNumber= 6828116;",e4010-20180312163438020-428.txt
 "GreetingDefault
 Greeting
 ProviderOption
@@ -26,10 +26,10 @@ ProviderOption
 MainMenu
 MoreOptions
 TakeSurveyYN
-Transfer", e4010-20180312170640756-452, e4010-20180312170640756-452.txt
+Transfer", e4010-20180312170640756-452,e4010-20180312170640756-452.txt
 "GreetingDefault
 Greeting
 ProviderOption
 MainMenu
 TakeSurveyYN
-Transfer", e4007-20180312170730800-310, e4007-20180312170730800-310.txt
+Transfer", e4007-20180312170730800-310,e4007-20180312170730800-310.txt
