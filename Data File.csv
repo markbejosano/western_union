@@ -4,7 +4,7 @@ Closed
 EmergencyMsg
 ClosedHospUCMM_1
 ClosedHospUCMM_2
-ClosedHospUCMM_3","TransferReason:Patient wants Answering Service;",e4010-20180312163438020-428.txt
+ClosedHospUCMM_3","TransferReason=Patient wants Answering Service;",e4010-20180312163438020-428.txt
 "GreetingDefault
 Greeting
 ProviderOption
