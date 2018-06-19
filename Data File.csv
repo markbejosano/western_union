@@ -1,34 +1,26 @@
 CallFlow,CallTransfer,CallLogs
-"ClosedGreeting
-Closed
-EmergencyMsg
-ClosedHospUCMM_1
-ClosedHospUCMM_2
-ClosedHospUCMM_3","TransferReason=Patient wants Answering Service;",e4010-20180312163438020-428.txt
-"GreetingDefault
-Greeting
-ProviderOption
-MainMenu
-MMNewOrEmblemPt
-TakeSurveyYN
-Transfer","TransferReason=Emblem Health Patient;",e4007-20180312172019410-322.txt
-"GreetingDefault
-Greeting
-ProviderOption
-MainMenu
-MoreOptions
-TakeSurveyYN
-Transfer","TransferReason=Patient calling about medical records;",e4007-20180312164410776-262.txt
-"GreetingDefault
-Greeting
-ProviderOption
-MainMenu
-MoreOptions
-TakeSurveyYN
-Transfer","TransferReason=Patient calling about billing;TransferNumber=6828117;",e4010-20180312170640756-452.txt
-"GreetingDefault
-Greeting
-ProviderOption
-MainMenu
-TakeSurveyYN
-Transfer","TransferReason=Healthcare providers and hospitals calling to speak to physician;",e4007-20180312170730800-310.txt
+"Greeting
+REFWelcomeXfinity
+REFChooseID_1
+REFChooseID_2",
+"transferType_module=CallerID;",e4009-20180607134023560-680.txt
+"LOBMenuTech_1
+LOBMenuTech_2
+LOBMenuTech_3
+LOBMenuTech_4
+LOBMenuTech_5
+LOBMenuTech_6
+HSIMenu_1
+HSIMenu_2
+HSIMenu_3
+HSIMenu_4
+HSIMenu_5
+GetSSNTransfer",
+"transferType_module=Technical; transferType_type=HSI;",e4009-20180607213450757-078.txt
+"MobileNumOnFile
+ModemReset_2
+ModemReset_3
+ModemReset_6
+ModemResetOtherOptions
+GetSSNTransfer",
+"transferType_module=Technical;transferType_type=HSI;transferType_subType=WirelessGateway;",e4010-20180607221756327-114.txt
