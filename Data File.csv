@@ -11,24 +11,24 @@ ProviderOption
 MainMenu
 MMNewOrEmblemPt
 TakeSurveyYN
-Transfer",e4007-20180312172019410-322,e4007-20180312172019410-322.txt
+Transfer","TransferReason:Emblem Health Patient;",e4007-20180312172019410-322.txt
 "GreetingDefault
 Greeting
 ProviderOption
 MainMenu
 MoreOptions
 TakeSurveyYN
-Transfer",e4007-20180312164410776-262,e4007-20180312164410776-262.txt
+Transfer","TransferReason:Patient calling about medical records;",e4007-20180312164410776-262.txt
 "GreetingDefault
 Greeting
 ProviderOption
 MainMenu
 MoreOptions
 TakeSurveyYN
-Transfer", e4010-20180312170640756-452,e4010-20180312170640756-452.txt
+Transfer","TransferReason:Patient calling about billing;TransferNumber=6828117;",e4010-20180312170640756-452.txt
 "GreetingDefault
 Greeting
 ProviderOption
 MainMenu
 TakeSurveyYN
-Transfer", e4007-20180312170730800-310,e4007-20180312170730800-310.txt
+Transfer","TransferReason:Healthcare providers and hospitals calling to speak to physician;",e4007-20180312170730800-310.txt
