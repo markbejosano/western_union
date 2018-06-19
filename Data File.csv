@@ -4,8 +4,8 @@ Closed
 EmergencyMsg
 ClosedHospUCMM_1
 ClosedHospUCMM_2
-ClosedHospUCMM_3","Transfer_Reason=Patient calling about medical records;
-TransferNumber= 6828116;",e4010-20180312163438020-428.txt
+ClosedHospUCMM_3","TransferReason:Patient wants Answering Service;
+Transfering to:6828200;",e4010-20180312163438020-428.txt
 "GreetingDefault
 Greeting
 ProviderOption
