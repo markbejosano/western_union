@@ -3,7 +3,6 @@ CallFlow,CallTransfer,CallLogs
 MTBPLang
 MMBPMainMenu
 MMPreFraudDiscMsg
-MMTransFraudDisclaimer
 MMTelemktYN
 MMGoldCardPhone
 MMNameVerify_1
@@ -30,9 +29,7 @@ MMTempTransNum2_3
 MMServiceSurvey","Language=en-us;CTV=6000050;TransactionType=12;VRUTranType=MTBPSender EN;Skill=7999;",00A201B2-10026D1C.txt
 "WelcomeNoID
 MTBPLang
-MMBPMainMenu
 MMPreFraudDiscMsg
-MMTransFraudDisclaimer
 MMTelemktYN
 MMGoldCardPhone
 MMHold
@@ -45,10 +42,7 @@ MMLastSend_1
 MMLastSend_2
 MMCountrySameYN_1
 MMLocateSameYN_1
-MMGetPickupStateASR
 MMCollectState
-MMStateDisambig
-MMStateDisambigConfirm
 MMConfirmSendType_1
 MMConfirmSendType_2
 MMConfirmSendType_3
