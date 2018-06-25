@@ -12,8 +12,5 @@ if check_file=="True":
 
   final = initial_path + " " + z + " " + command
 
-
   os.system(final)
 
- else:
-  print "do nothing"
