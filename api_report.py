@@ -12,7 +12,7 @@ passed = 0
 failed = 0
 gettestcases = set()
 
-if os.path.isfile('HTTPRequest.jtl","r"): #new added code
+if os.path.isfile('HTTPRequest.jtl'): #new added code
 
 jtl = open("HTTPRequest.jtl", "r")
 for line in jtl:
