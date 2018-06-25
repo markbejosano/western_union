@@ -14,51 +14,49 @@ gettestcases = set()
 
 check_file = os.path.isfile("HTTPRequest.jmx")
 if check_file=="True":
-#new added code for api computation if nonee====================
-getcontext().prec = 3
-percentage = 0
-totalper = str(percentage) + '%'		  
-gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")	
-		   #end code
+	getcontext().prec = 3
+	percentage = 0
+	totalper = str(percentage) + '%'		  
+	gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")	
+		  
 else:	
-	
-jtl = open("HTTPRequest.jtl", "r")
-for line in jtl:
-	if "lb" in line:
-		line = line.replace('</httpSample>','').strip()
-		gettestcases.add(line)
-		
-print '\n'.join(gettestcases)
-testcases = len(gettestcases)
+	jtl = open("HTTPRequest.jtl", "r")
+	for line in jtl:
+		if "lb" in line:
+			line = line.replace('</httpSample>','').strip()
+			gettestcases.add(line)
 
-y = 1
-for results in gettestcases:		
-	if ('rc="200"' in results) and ('rm="OK"' in results):
-		endvalue = results.find("lb=") 
-		endvalue2 = results.find("rc")
-		strtvalue = results.rfind('', 0, endvalue)
-		strtvalue2 = results.rfind('', 0, endvalue2)
-		getapi = results[strtvalue:strtvalue2].replace('lb=','').replace('"','')
-		print "TEST CASE:", y,   "   ", getapi,  "Passed"
-		getapi = str(getapi)
-		y = str(y)
-		gen_report.write("<tr><td align='center'>" + y + "</td><td>" + getapi + "</td> <td bgcolor='#99e26f'>Passed </td></tr>")
-		passed+=1
-		y = int(y)
-		y+=1
-	else:
-		endvalue = results.find("lb=") 
-		endvalue2 = results.find("rc")
-		strtvalue = results.rfind('', 0, endvalue)
-		strtvalue2 = results.rfind('', 0, endvalue2)
-		getapi = results[strtvalue:strtvalue2].replace('lb=','').replace('"','')
-		print "TEST CASE:", y,   "   ", getapi,  "Failed"
-		getapi = str(getapi)
-		y = str(y)
-		gen_report.write("<tr><td align='center'>" + y + "</td><td>" + getapi + "</td> <td bgcolor='#e06745'>Failed </td></tr>")
-		failed+=1
-		y = int(y)
-		y+=1
+	print '\n'.join(gettestcases)
+	testcases = len(gettestcases)
+
+	y = 1
+	for results in gettestcases:		
+		if ('rc="200"' in results) and ('rm="OK"' in results):
+			endvalue = results.find("lb=") 
+			endvalue2 = results.find("rc")
+			strtvalue = results.rfind('', 0, endvalue)
+			strtvalue2 = results.rfind('', 0, endvalue2)
+			getapi = results[strtvalue:strtvalue2].replace('lb=','').replace('"','')
+			print "TEST CASE:", y,   "   ", getapi,  "Passed"
+			getapi = str(getapi)
+			y = str(y)
+			gen_report.write("<tr><td align='center'>" + y + "</td><td>" + getapi + "</td> <td bgcolor='#99e26f'>Passed </td></tr>")
+			passed+=1
+			y = int(y)
+			y+=1
+		else:
+			endvalue = results.find("lb=") 
+			endvalue2 = results.find("rc")
+			strtvalue = results.rfind('', 0, endvalue)
+			strtvalue2 = results.rfind('', 0, endvalue2)
+			getapi = results[strtvalue:strtvalue2].replace('lb=','').replace('"','')
+			print "TEST CASE:", y,   "   ", getapi,  "Failed"
+			getapi = str(getapi)
+			y = str(y)
+			gen_report.write("<tr><td align='center'>" + y + "</td><td>" + getapi + "</td> <td bgcolor='#e06745'>Failed </td></tr>")
+			failed+=1
+			y = int(y)
+			y+=1
 		
 print "Passed: ", passed
 print "Failed: ", failed
