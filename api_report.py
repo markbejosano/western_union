@@ -13,13 +13,8 @@ failed = 0
 gettestcases = set()
 
 check_file = os.path.isfile("HTTPRequest.jtl")
-if check_file=="False":
-	getcontext().prec = 3
-	percentage = 0
-	totalper = str(percentage) + '%'		  
-	gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")	
-		  
-else:	
+if check_file=="True":
+
 	jtl = open("HTTPRequest.jtl", "r")
 	for line in jtl:
 		if "lb" in line:
@@ -57,7 +52,14 @@ else:
 			failed+=1
 			y = int(y)
 			y+=1
-		
+else:	
+	getcontext().prec = 3
+	percentage = 0
+	totalper = str(percentage) + '%'		  
+	gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")	
+		  
+			
+			
 print "Passed: ", passed
 print "Failed: ", failed
 getcontext().prec = 3
