@@ -12,8 +12,16 @@ passed = 0
 failed = 0
 gettestcases = set()
 
-if os.path.isfile('HTTPRequest.jtl'): #new added code
-
+check_file = os.path.isfile("HTTPRequest.jmx")
+if check_file=="True":
+#new added code for api computation if nonee====================
+getcontext().prec = 3
+percentage = 0
+totalper = str(percentage) + '%'		  
+gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")	
+		   #end code
+else:	
+	
 jtl = open("HTTPRequest.jtl", "r")
 for line in jtl:
 	if "lb" in line:
@@ -59,13 +67,6 @@ percentage = Decimal(passed) / Decimal(testcases) * 100
 totalper = str(percentage) + '%'
 gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")
 
-#new added code for api computation if nonee====================
-else: 
-getcontext().prec = 3
-percentage = 0
-totalper = str(percentage) + '%'		  
-gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")	
-		   #end code
 #api_result------------------------------------------------------------------------------==========================
 api_result = open("api_result.html","a")
 api_result.write("<center><h1>Inbound Build Acceptance Automation</h1> <h3>API</h3></center>")
