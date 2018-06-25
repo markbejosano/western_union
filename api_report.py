@@ -12,7 +12,7 @@ passed = 0
 failed = 0
 gettestcases = set()
 
-check_file = os.path.isfile("HTTPRequest.jmx")
+check_file = os.path.isfile("HTTPRequest.jtl")
 if check_file=="True":
 	getcontext().prec = 3
 	percentage = 0
