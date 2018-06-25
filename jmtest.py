@@ -1,8 +1,8 @@
 import os
 import os.path
 
-if os.path.isfile("HTTPRequest.jmx")==True:
-
+check_file = os.path.isfile("HTTPRequest.jmx"):
+if check_file=="True":
   y = os.path.abspath("./HTTPRequest.jmx")
   z = y.replace('\\','\\\\') 
 
