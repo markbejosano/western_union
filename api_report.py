@@ -63,6 +63,7 @@ else:
 print "Passed: ", passed
 print "Failed: ", failed
 getcontext().prec = 3
+testcases = 0
 percentage = Decimal(passed) / Decimal(testcases) * 100 
 totalper = str(percentage) + '%'
 gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")
