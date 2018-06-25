@@ -1,4 +1,7 @@
 import os
+import os.path
+
+if os.path.isfile("HTTPRequest.jmx")==True:
 
 y = os.path.abspath("./HTTPRequest.jmx")
 z = y.replace('\\','\\\\') 
@@ -11,3 +14,6 @@ final = initial_path + " " + z + " " + command
 
 
 os.system(final)
+
+else:
+  print "do nothing"
