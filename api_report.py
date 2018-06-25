@@ -13,7 +13,7 @@ failed = 0
 gettestcases = set()
 
 check_file = os.path.isfile("HTTPRequest.jtl")
-if check_file=="True":
+if check_file=="False":
 	getcontext().prec = 3
 	percentage = 0
 	totalper = str(percentage) + '%'		  
