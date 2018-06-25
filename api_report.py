@@ -52,6 +52,14 @@ if check_file=="True":
 			failed+=1
 			y = int(y)
 			y+=1
+			
+	print "Passed: ", passed
+	print "Failed: ", failed
+	getcontext().prec = 3
+	percentage = Decimal(passed) / Decimal(testcases) * 100 
+	totalper = str(percentage) + '%'
+	gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")
+			
 else:	
 	getcontext().prec = 3
 	percentage = 0
@@ -60,13 +68,7 @@ else:
 		  
 			
 			
-print "Passed: ", passed
-print "Failed: ", failed
-getcontext().prec = 3
-testcases = 0
-percentage = Decimal(passed) / Decimal(testcases) * 100 
-totalper = str(percentage) + '%'
-gen_report.write("</table><table align='center'> <tr><td><h3>Passed: " + totalper + "</h3></td></tr> </table>")
+
 
 #api_result------------------------------------------------------------------------------==========================
 api_result = open("api_result.html","a")
